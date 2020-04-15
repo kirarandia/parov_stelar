@@ -1,3 +1,7 @@
+body{
+  background: url(.assets/images/Grandpas Groove snapshot.jpg);
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
