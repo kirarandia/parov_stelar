@@ -1,19 +1,25 @@
 body{
-  background: url(.assets/images/Grandpas Groove snapshot.jpg);
+  background-image: url("/assets/images/Grandpas Groove snapshot.jpg");
+}
+
+a{
+  color:white;
+}
+
+.social{
+  width: 20px;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
   grid-template-areas:
   "header . ."
   ". logo ."
   ". sub-line ."
   ". footer .";
   gap: 0px 10px;
-  place-content: space-evenly;
-  place-items: center;
 }
 
 .place-menu {
@@ -25,12 +31,10 @@ body{
   grid-area: logo;
   width: 60%;
   padding: 5px;
-  object-fit: contain;
 }
 
 .place-sub-line{
   grid-area: sub-line;
-  place-self: center stretch;
   padding: 5px;
 }
 
