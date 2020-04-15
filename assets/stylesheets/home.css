@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "header . ."
+  ". logo ."
+  ". sub-line ."
+  ". footer .";
+  gap: 0px 10px;
+  place-content: space-evenly;
+  place-items: center;
+}
+
+.place-menu {
+  grid-area: header;
+  padding: 10px;
+}
+
+.place-logo {
+  grid-area: logo;
+  width: 60%;
+  padding: 5px;
+  object-fit: contain;
+}
+
+.place-sub-line{
+  grid-area: sub-line;
+  place-self: center stretch;
+  padding: 5px;
+}
+
+.place-footer {
+  grid-area: footer;
+  padding: 10px;
+}
