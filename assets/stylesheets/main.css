@@ -1,6 +1,25 @@
 body {
 	font-family: 'Raleway', sans-serif;}
 
+h1{
+	font-size: 75px;
+	text-transform: uppercase;
+	letter-spacing: 30px;
+	line-height: 30%;
+}
+
+p.text{
+  text-decoration: none;
+  font-weight: normal;
+  font-kerning: normal;
+}
+
+p.category{
+	font-size: 10px;
+	font-weight: normal;
+	text-align: left;
+}
+
 a {
 	color: grey;
 }
