@@ -1,0 +1,15 @@
+.containter {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  background: green;
+  gap: 1rem;
+}
+
+.grid > div {
+  padding: 2rem;
+}
+
+.grid-element > div:nth-child(1){
+  background: grey;
+}
