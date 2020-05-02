@@ -1,31 +1,86 @@
 body {
-	font-family: 'Raleway', sans-serif;}
+	font-family: 'Raleway', sans-serif;
+}
+
+.page-style{
+	/*standard page layout*/
+  display: grid;
+  align-content: space-between;
+  grid-template-columns:
+	10% auto 10%;
+
+	grid-template-rows:
+	10%
+	auto
+	10%;
+
+  grid-template-areas:
+	". . ."
+  ". main ."
+  ". footer ."
+}
+
+	.main{
+		/*man content layout*/
+	  grid-area: main;
+	  display: grid;
+	  justify-self: center;
+	}
+
+	.place-footer {
+	  grid-area: footer;
+	  align-self: end;
+	  justify-self: center;
+		align-items: center;
+	  padding: 5px;
+	  /*background: grey;*/
+	}
+
+	.social{
+		display: inline-block;
+		align-self: center;
+	  width: 15px;
+		height: auto;
+	}
 
 .wrapper {
 	max-width: 500px;
+}
+
+ul{
+text-align: left;
+line-height: 1rem;
+margin-top: 0rem;
+margin-left: 2rem;
+margin-bottom: 0rem;
 }
 
 h1{
 	font-size: 65px;
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: 30px;
-	margin-top:0;
-	margin-bottom:2rem;
+	letter-spacing: 2rem;
+	margin-bottom: 1rem;
+	margin-top: 0;
 }
 
 h3{
-	font-weight: 500;
+	/*stylnig of sub-header*/
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 0;
 	margin-bottom: 0px;
 	text-align: center;
 }
 
 img{
+	/*img styles*/
   width: 100%;
   heght: 100%;
 }
 
 p.text{
+	/*text boxes styles*/
 	font-size: 16px;
 	font-weight: normal;
 	line-height: 1.5rem;
@@ -33,24 +88,20 @@ p.text{
 	text-align: center;
   font-weight: normal;
   font-kerning: normal;
-	margin-top: 0;
+	margin-top:0;
 	margin-bottom: 1rem;
 }
 
-ul{
-text-align: left;
-line-height: 1rem;
-margin-top: 1rem;
-margin-left: 2rem;
-margin-bottom: 1rem;
+p.text > a{
+	/*all liinks within text*/
+	color: #5FC9EC;
+	font-weight: normal;
+	text-decoration: none;
 }
 
 p.category{
 	font-size: 10px;
-	font-weight: normal;
+	letter-spacing: 1px;
+	font-weight: 300;
 	text-align: left;
-}
-
-a {
-	color: grey;
 }

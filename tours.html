@@ -4,26 +4,151 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
-  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/home.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/tours.css">
+  <link rel="stylesheet" type="text/css" href="/assets/javascript/footer.js">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/nav-bar.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-<<body>
+<body>
 
-  <div class="place-sub-line">
+  <div id="nav"></div>
 
-    <a href="music-videos.html">Music videos</a>
+    <script>
+      $(function(){
+      $("#nav").load("nav-bar.html");
+      });
+    </script>
 
-    <a href="tours.html">Tours</a>
+    <section class="page-style">
 
-    <a href="home.html">Home</a>
+      <div class="main">
+        <h1>Tours</h1>
 
-    <a href="shop.html">Shop</a>
+        <table class="place-table">
+          <thead>
+            <tr>
+              <th scope="col" colspan="3">Date</th>
+              <th scope="col">Location</th>
+              <th scope="col">State, Country</th>
+              <th scope="col">Ticket Link</th>
+            </tr>
+          </thead>
 
-    <a href="about.html">about</a>
+          <tbody>
+  <!--entry 1-->
+  <tr>
+      <td class="date-caps">Sat</td>
+      <td>Mar</td>
+      <td>14</td>
+      <td>VYV Festival</td>
+      <td>Dijon, FR</td>
+      <td><a href="https://vyvfestival.org/infos-billetterie/">Get Tickets</a></td>
+    </tr>
+  <!--entry 2-->
+  <tr>
+      <td class="date-caps">Thr</td>
+      <td>Mar</td>
+      <td>19</td>
+      <td>Zorlu Center</td>
+      <td>Istandbul, TK</td>
+      <td class="sold-out">sold out</td>
+    </tr>
+  <!--entry 3-->
+  <tr>
+      <td class="date-caps">Sat</td>
+      <td>Mar</td>
+      <td>21</td>
+      <td>Release Athens</td>
+      <td>Athens, GR</td>
+      <td><a href="https://vyvfestival.org/infos-billetterie/">Get Tickets</a></td>
+    </tr>
+  <!--entry 4-->
+  <tr>
+      <td class="date-caps">Wed</td>
+      <td>Mar</td>
+      <td>25</td>
+      <td>Fix Factory of Sound Open Air</td>
+      <td>Thessaloniki, GR</td>
+      <td><a href="https://vyvfestival.org/infos-billetterie/">Get Tickets</a></td>
+    </tr>
+  <!--entry 5-->
+  <tr>
+      <td class="date-caps">Wed</td>
+      <td>Apr</td>
+      <td>8</td>
+      <td>Neversea Festival</td>
+      <td>Constana, RO</td>
+      <td><a href="https://vyvfestival.org/infos-billetterie/">Get Tickets</a></td>
+    </tr>
+  <!--entry 6-->
+  <tr>
+      <td class="date-caps">Fri</td>
+      <td>Apr</td>
+      <td>17</td>
+      <td>Nos Alive</td>
+      <td>Lisbon, PT</td>
+      <td><a href="https://vyvfestival.org/infos-billetterie/">Get Tickets</a></td>
+    </tr>
+  <!--entry 7-->
+  <tr>
+      <td class="date-caps">Mon</td>
+      <td>Apr</td>
+      <td>27</td>
+      <td>Déciibulles Festival</td>
+      <td>Nueve-Église, FR</td>
+      <td><a href="https://vyvfestival.org/infos-billetterie/">Get Tickets</a></td>
+    </tr>
+  <!--entry 8-->
+  <tr>
+      <td class="date-caps">Tue</td>
+      <td>May</td>
+      <td>5</td>
+      <td>Stars In Town</td>
+      <td>Schaffhausen, CH</td>
+      <td><a href="https://vyvfestival.org/infos-billetterie/">Get Tickets</a></td>
+    </tr>
+  <!--entry 9-->
+  <tr>
+      <td class="date-caps">Mon</td>
+      <td>May</td>
+      <td>11</td>
+      <td>Strand Fesztivál</td>
+      <td>Zamáardi, HU</td>
+      <td><a href="https://vyvfestival.org/infos-billetterie/">Get Tickets</a></td>
+    </tr>
+  <!--entry 10-->
+  <tr>
+      <td class="date-caps">Tue</td>
+      <td>May</td>
+      <td>19</td>
+      <td>Trutnoff Brnoon festival</td>
+      <td>Brno, CZ</td>
+      <td><a href="https://vyvfestival.org/infos-billetterie/">Get Tickets</a></td>
+    </tr>
+  <!--entry 11-->
+  <tr>
+      <td class="date-caps">Sat</td>
+      <td>May</td>
+      <td>30</td>
+      <td>Saltwave Festival</td>
+      <td>Jastarniia, PL</td>
+      <td><a href="https://vyvfestival.org/infos-billetterie/">Get Tickets</a></td>
+    </tr>
 
-    <a href="discography.html">discography</a>
+    </tbody>
 
-  </div>
+      </table>
+    </div>
+    <div class="place-footer" id="footer"></div>
 
-</body>
+    <script>
+    $(function(){
+      $("#footer").load("footer.html");
+    });
+    </script>
+
+    </section>
+
+    </body>
   </html>

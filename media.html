@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/media.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/nav-bar.css">
+  <link rel="stylesheet" type="text/css" href="/assets/javascript/footer.js">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+  <div  id="nav"></div>
+
+  <script>
+  $(function(){
+    $("#nav").load("nav-bar.html");
+  });
+  </script>
+
+<section class="page-style">
+
+  <div class="main">
+    <h1>Media</h1><p class="category">Music Videos</p>
+
+      <div class="media-place">
+      <!--video 1-->
+        <video controls src=
+        "/assets/videos/Parov Stelar-Grandpas Grooves_1080p.mp4"
+        poster="/assets/images/Granpas groove snapshot2.png" preload>
+        </video>
+
+        <!--video 2-->
+        <video controls src=
+        "assets/videos/Parov Stelar - Mama Talking ft. Stuff Smith copy.mp4"
+        poster="/assets/images/mama talking 2.png">
+        </video>
+
+        <!--video 3-->
+        <video controls src=
+        "assets/videos/Parov Stelar - The Sun (feat. Graham Candy) copy.mp4"
+        poster="/assets/images/The Sun (feat. Graham Candy)2.png">
+        </video>
+
+        <!--video 4-->
+        <video controls src=
+        "assets/videos/Parov Stelar - The Sun (feat. Graham Candy) copy.mp4"
+        poster="/assets/images/Jimmys gang2.png">
+        </video>
+
+        <!--video 5-->
+        <video controls src=
+        "assets/videos/Parov Stelar - The Sun (feat. Graham Candy) copy.mp4"
+        poster="/assets/images/Clap your hands.png">
+        </video>
+
+        <!--video 6-->
+        <video controls src=
+        "assets/videos/Parov Stelar - The Sun (feat. Graham Candy) copy.mp4"
+        poster="/assets/images/Brass Devil.png">
+        </video>
+
+    </div>
+
+  </div>
+
+  <div class="place-footer" id="footer"></div>
+
+  <script>
+  $(function(){
+    $("#footer").load("footer.html");
+  });
+  </script>
+
+  </section>
+
+    </body>
+  </html>

@@ -1,0 +1,12 @@
+.albums {
+  display: grid;
+  grid-template-columns: repeat (auto-fit, 327px);
+  grid-template-rows: repeat (auto-fit, 160);
+  place-items: center;
+  gap: 30px;
+  justify-content: space-evenly;
+  align-content: start;
+  grid-template-areas:
+  "mv mv mv"
+  "mv mv mv"
+}

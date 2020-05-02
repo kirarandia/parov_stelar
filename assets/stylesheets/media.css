@@ -1,26 +1,27 @@
-.container{
+.media-place {
   display: grid;
-  align-content: space-between;
-  grid-template-columns: 10% 50% 10%;
-  grid-template-rows: 10% auto 10%;
+  grid-template-columns: repeat (auto-fit, 327px);
+  grid-template-rows: repeat (auto-fit, 160);
+  place-items: center;
+  gap: 30px;
+  justify-content: space-evenly;
+  align-content: start;
   grid-template-areas:
-  "header . logo"
-  ". main ."
-  ". footer ."
+  "mv mv mv"
+  "mv mv mv"
 }
 
-.menu{
-  grid-area: header;
-  padding: 10px;
+.video-place {
+  grid-area: mv;
 }
 
-.main{
-  grid-area: main;
-  padding: 10px;
-  text-align: center;
+video {
+  width: 327px;
+  height: 160px;
+  background-size: cover;
 }
 
-.logo{
-    grid-area: logo;
-    padding: 10px;
-  }
+video[poster] {
+  object-fit: fill;
+
+}

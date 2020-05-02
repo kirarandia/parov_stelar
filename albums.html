@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/nav-bar.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/albums.css">
+  <link rel="stylesheet" type="text/css" href="/assets/javascript/footer.js">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+  <body>
+    <div id="nav"></div>
+
+      <script>
+        $(function(){
+        $("#nav").load("nav-bar.html");
+        });
+      </script>
+
+      <section class="page-style">
+
+        <div class="main">
+          <h1>Albums</h1>
+
+          <a href="#">
+            <img src="assets/images/Albums/Parov Stellar Burning Spider album cover.jpeg">
+          </a>
+
+        </div>
+
+        <div class="place-footer" id="footer"></div>
+
+        <script>
+        $(function(){
+          $("#footer").load("footer.html");
+        });
+        </script>
+
+      </section>
+
+  </body>
+</html>
