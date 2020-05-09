@@ -1,0 +1,146 @@
+.info {
+  display: grid;
+  grid-template-columns: repeat (2, 1fr);
+  grid-template-rows: 1fr;
+  place-items: top;
+  grid-gap: 30px;
+  margin-top:;
+  align-content: start;
+  grid-template-areas:
+  "songs pic"
+}
+
+.song-info {
+  grid-area: songs;
+  padding-right: 1rem;
+}
+
+.cover-pic-wrap {
+  grid-area: pic;
+  position: relative;
+  width: 390px;
+  height: 377px;
+  align-content: end;
+  padding-left: 1rem;
+}
+
+.cover-pic{
+  width: 389px;
+  height: 352px;
+  vertical-align: top;
+  display: block;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: ;
+  border-radius: 0;
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: ;
+}
+
+.cover-pic > img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: ;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  padding: 0 0 0 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.close {
+  color: grey;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: normal;
+}
+
+.close:hover, .close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .cover-pic:hover{
+  width:110%;
+  height: 110%;
+  z-index: 10;
+} */
+
+#back{
+  font-weight: 300;
+  font-size: 6px;
+  text-align: left;
+  color:black;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  width: 30px;
+  padding-bottom: 20px;
+}
+
+#back:hover {
+  font-weight: 500;
+}
+
+ #price {
+  font-size: 8px;
+  text-transform: uppercase;
+  text-align: right;
+  padding: 0;
+}
+
+table:last-child{
+  margin-bottom: 0px;
+}
+
+td.align{
+  vertical-align: top;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+td {
+}
+
+td > h, p {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+}
+
+h.head {
+  text-align: left;
+  font-size: 12px;
+  line-height: 0px;
+  margin-bottom: 2px;
+}
+
+p.cap {
+  font-size: 8px;
+  font-weight: 300;
+  line-height: 16px;
+
+  margin-bottom: 20px;
+}

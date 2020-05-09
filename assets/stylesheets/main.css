@@ -5,35 +5,51 @@ body {
 .page-style{
 	/*standard page layout*/
   display: grid;
-  align-content: space-between;
+  align-content: space-evenly; /*space-between*/
   grid-template-columns:
 	10% auto 10%;
 
 	grid-template-rows:
-	10%
 	auto
 	10%;
 
   grid-template-areas:
-	". . ."
   ". main ."
   ". footer ."
+}
+
+a.nav {
+  color:black;
+  text-decoration: none;
+  text-transform:uppercase;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 	.main{
 		/*man content layout*/
 	  grid-area: main;
 	  display: grid;
+		align-content: top;
+		align-items: center;
 	  justify-self: center;
 	}
 
 	.place-footer {
+		display: inline-block;
 	  grid-area: footer;
 	  align-self: end;
 	  justify-self: center;
 		align-items: center;
-	  padding: 5px;
+	  padding-bottom: 5px;
 	  /*background: grey;*/
+	}
+
+	.place-footer a {
+		align-self: center;
+		padding-left: 5px;
+	  padding-right: 5px;
+		align-self: end;
 	}
 
 	.social{
@@ -51,8 +67,17 @@ ul{
 text-align: left;
 line-height: 1rem;
 margin-top: 0rem;
-margin-left: 2rem;
+margin-left: 3rem;
 margin-bottom: 0rem;
+}
+
+@media only screen and (max-width: 750px) {
+	ul{
+		font-size: 12px;
+		line-height: normal;
+		letter-spacing: .4px;
+		margin-left: 0;
+	}
 }
 
 h1{
@@ -60,8 +85,26 @@ h1{
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 	margin-top: 0;
+}
+
+
+@media only screen and (max-width: 750px) {
+	h1{
+		text-align: center;
+		font-size: 25px;
+		letter-spacing: 1rem;
+	}
+}
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	margin-bottom: 3rem;
+	margin-top: 0px;
 }
 
 h3{
@@ -71,6 +114,12 @@ h3{
 	margin-top: 0;
 	margin-bottom: 0px;
 	text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+	h3 {
+		font-size: 14px;
+	}
 }
 
 img{
@@ -92,6 +141,14 @@ p.text{
 	margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 750px) {
+	p.text {
+		text-align: left;
+		line-height: 2rem;
+		margin-bottom: 3rem;
+	}
+}
+
 p.text > a{
 	/*all liinks within text*/
 	color: #5FC9EC;
@@ -105,3 +162,6 @@ p.category{
 	font-weight: 300;
 	text-align: left;
 }
+
+
+/*nav bar styles*/

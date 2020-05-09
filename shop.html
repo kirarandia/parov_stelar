@@ -4,26 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
-  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/home.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/shop.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/nav-bar.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/nav-bar.js">
+  <link rel="stylesheet" type="text/css" href="/assets/javascript/footer.js">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-<<body>
+<body>
+  <!--insert Navigation-->
+  <div id="nav"></div>
+  <!--END-->
+  <!--navigation SCRIPT-->
+  <script>
+  $(function(){
+    $("#nav").load("nav-bar.html");
+  });
+  </script>
+  <!--END of navigation SCRIPT-->
 
-  <div class="place-sub-line">
+<!--standard layout-->
+  <section class="page-style">
+    <!--main content layout-->
+    <div class="main">
+      <!--page title-->
+      <h1>Shop</h1>
+      <!--holds shop items-->
+      <section class="shop">
 
-    <a href="music-videos.html">Music videos</a>
+        <div class="shop-item">
+          <a class="cover" href="shop.html"><img src="assets/images/Shop/bag.png"></a>
+          <div class="top-layer">
 
-    <a href="tours.html">Tours</a>
+          </div>
+          <!--END of top-layer-->
+        </div>
+        <!--END of shop-item#1-->
+      <div class="shop-item">
+        <a class="cover" href="shop.html">
+          <img src="assets/images/Shop/sweatshirt-F.png"></a>
+        <div class="top-layer">
 
-    <a href="home.html">Home</a>
+        </div>
+        <!--END of top-layer-->
+      </div>
+      <!--END of shop item#2-->
+      </section>
+      <!--END of shop section-->
+    </div>
 
-    <a href="shop.html">Shop</a>
+    <div class="place-footer" id="footer"></div>
 
-    <a href="about.html">about</a>
+    <script>
+    $(function(){
+      $("#footer").load("footer.html");
+    });
+    </script>
 
-    <a href="discography.html">discography</a>
-
-  </div>
+  </section>
 
 </body>
-  </html>
+</html>

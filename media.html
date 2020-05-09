@@ -6,75 +6,99 @@
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/media.css">
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/nav-bar.css">
-  <link rel="stylesheet" type="text/css" href="/assets/javascript/footer.js">
+  <script src="/assets/javascript/video-light-box.js"></script>
+  <script src="/assets/javascript/nav-bar.js"></script>
+  <script src="/assets/javascript/footer.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
-
+  <!--insert Navigation-->
   <div  id="nav"></div>
-
+  <!--END-->
+  <!--navigation SCRIPT-->
   <script>
   $(function(){
     $("#nav").load("nav-bar.html");
   });
   </script>
+  <!--END of navigation SCRIPT-->
 
-<section class="page-style">
+  <!--standard layout-->
+  <section class="page-style">
 
-  <div class="main">
-    <h1>Media</h1><p class="category">Music Videos</p>
+    <!--main content layout-->
+    <div class="main">
+      <h1>Media</h1>
+      <p class="category">Music Videos</p>
+      <!--holds the videos-->
+      <div class="page-container">
 
-      <div class="media-place">
-      <!--video 1-->
-        <video controls src=
-        "/assets/videos/Parov Stelar-Grandpas Grooves_1080p.mp4"
-        poster="/assets/images/Granpas groove snapshot2.png" preload>
-        </video>
+        <!--video#1-->
+        <div class="video-container">
+          <!--poster image for the video-->
+          <img class="cover" src="assets/images/Grandpas groove snapshot.jpg"/>
+          <!--layer above the image-->
+          <div class="top-layer">
+            <!--PLAY button displayed, low opacity-->
+            <div class="play-button"><input type="image" src="assets/images/Play button.png"
+            id="playme" onclick="revealVideo('video','youtube')"/></div>
+            <!--title hidden, on hover revealed-->
+          <div class="text-reveal">
+            <p class="title">Granpa's Groove<br>
+            <p class="feat">ft.Aron Chupa</p></div>
+          </div>
+            <!--END of top-layer-->
+          </div>
+          <!--end of video#1-->
+          
+      <!--video#2-->
+      <div class="video-container">
+        <!--poster image for the video-->
+        <img class="cover" src="assets/images/mama talking 2.png"/>
+        <!--video title-->
+        <div class="top-layer">
+          <div class="play-button"><input type="image" src="assets/images/Play button.png"
+          id="playme" onclick="revealVideo('video','youtube')"/></div>
+          <div class="text-reveal">
+          <p class="title">Granpa's Groove<br>
+          <p class="feat">ft.Aron Chupa</p></div>
+        </div>
+          <!--END of top-layer-->
+        </div>
+        <!--END of video#2-->
 
-        <!--video 2-->
-        <video controls src=
-        "assets/videos/Parov Stelar - Mama Talking ft. Stuff Smith copy.mp4"
-        poster="/assets/images/mama talking 2.png">
-        </video>
+        <!--video#3-->
+        <div class="video-container">
+          <!--poster image for the video-->
+          <img class="cover" src="assets/images/The Sun (feat. Graham Candy)2.png"/>
+          <!--video title-->
+          <div class="top-layer">
+            <div class="play-button"><input type="image" src="assets/images/Play button.png"
+            id="playme" onclick="revealVideo('video','youtube')"/></div>
+            <div class="text-reveal">
+            <p class="title">Granpa's Groove<br>
+            <p class="feat">ft.Aron Chupa</p></div>
+          </div>
+            <!--END of top-layer-->
+          </div>
+          <!--END of video#3-->
 
-        <!--video 3-->
-        <video controls src=
-        "assets/videos/Parov Stelar - The Sun (feat. Graham Candy) copy.mp4"
-        poster="/assets/images/The Sun (feat. Graham Candy)2.png">
-        </video>
-
-        <!--video 4-->
-        <video controls src=
-        "assets/videos/Parov Stelar - The Sun (feat. Graham Candy) copy.mp4"
-        poster="/assets/images/Jimmys gang2.png">
-        </video>
-
-        <!--video 5-->
-        <video controls src=
-        "assets/videos/Parov Stelar - The Sun (feat. Graham Candy) copy.mp4"
-        poster="/assets/images/Clap your hands.png">
-        </video>
-
-        <!--video 6-->
-        <video controls src=
-        "assets/videos/Parov Stelar - The Sun (feat. Graham Candy) copy.mp4"
-        poster="/assets/images/Brass Devil.png">
-        </video>
-
+      </div>
+      <!--END of page-container-->
     </div>
+    <!--END of main-->
 
-  </div>
-
-  <div class="place-footer" id="footer"></div>
-
-  <script>
-  $(function(){
-    $("#footer").load("footer.html");
-  });
-  </script>
-
+    <!--footer with social media links-->
+    <div class="place-footer" id="footer"></div>
+    <!--footer script-->
+    <script>
+    $(function(){
+      $("#footer").load("footer.html");
+    });
+    </script>
+    <!--END of footer script-->
   </section>
-
-    </body>
-  </html>
+  <!--END of page style-->
+</body>
+</html>

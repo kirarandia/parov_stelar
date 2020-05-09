@@ -1,27 +1,125 @@
-.media-place {
+.page-container {
   display: grid;
   grid-template-columns: repeat (auto-fit, 327px);
-  grid-template-rows: repeat (auto-fit, 160);
-  place-items: center;
+  grid-template-rows: repeat (auto-fit, 160px);
   gap: 30px;
+  place-items: top;
+  margin: 0;
+  padding: 0;
   justify-content: space-evenly;
   align-content: start;
   grid-template-areas:
   "mv mv mv"
   "mv mv mv"
 }
-
-.video-place {
-  grid-area: mv;
+/*container for individual video*/
+.video-container{
+  position: relative;
+  text-align: center;
+  top: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 
-video {
-  width: 327px;
-  height: 160px;
-  background-size: cover;
+/*poster position*/
+.cover {
+  opacity: 1;
+  display: block;
+  min-width: auto;
+  height: 100%;
+  object-fit: fit;
+
+}
+/**/
+.cover > img{
+  height: 100%;
+  width: 100%;
 }
 
-video[poster] {
-  object-fit: fill;
 
+/*container for text and button*/
+.top-layer {
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+
+  /*smooth transition on hover*/
+    -moz-transition: all 0.4s ease-in-out 0s;
+  	-webkit-transition: all 0.4s ease-in-out 0s;
+  	-ms-transition: all 0.4s ease-in-out 0s;
+  	transition: all 0.4s ease-in-out 0s;
+}
+/*centered position of the button*/
+.play-button {
+  opacity: .5;
+  position: absolute;
+  width: 100%; /*vertic keeps object centered*/
+  height: 0; /*horiz keeps objects centered*/
+  top: 25%;
+  background-color: grey;
+  margin-top: 0;
+  text-align: center;
+}
+/*button full opacity on hover*/
+.play-button:hover{
+  opacity: 1;
+}
+
+/*position of title on top and centered*/
+.text-reveal {
+  opacity: 0;
+  position: absolute;
+  width: 100%; /*vertic keeps object centered*/
+  height: ; /*increses size of the box, doesn't shift text*/
+  /* background-color: yellow; */
+  top: 75%;
+  left: 0;
+  margin-top: 0;
+  text-align: center;
+
+/*smooth transition on hover*/
+  -moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+/*reveal title on hover*/
+.video-container:hover .text-reveal,
+.video-container.active .text-reveal {
+  opacity: 1;
+}
+/*full container covered with dark overlay on hover*/
+.video-container:hover .top-layer{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/*video title text style*/
+.title {
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 0 0 0;
+
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  text-align: center;
+  /* background-color: grey; */
+  /* vertical-align: center; */
+}
+/*feature line text style*/
+.feat {
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  margin-top: 0;
+  padding: 0;
+  /* background-color: grey; */
 }

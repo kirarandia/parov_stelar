@@ -1,15 +1,28 @@
-body{
+/* body{
   background-image: url("/assets/images/Granpas groove snapshot2.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+} */
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width:100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url("/assets/images/Granpas groove snapshot2.png") no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
 }
 
-@media only screen and (max-width: 500px) {
-  body {
-    background-image: url("/assets/images/Granpas groove snapshot2.png");
-  }
+@media only screen and (max-width: 750px) {
+
 }
 
 #overlay {
@@ -27,7 +40,7 @@ body{
 .container {
   display: grid;
   min-height: 100vh;
-  min-width: 100vh;
+  min-width: 100vw;
 
   grid-template-columns:
   [col1]auto [center-c]50% [last-c] auto[end-c];
@@ -43,7 +56,7 @@ body{
   "footer footer footer";
   gap: 1rem;
 }
-
+/*logo in the center of the screen*/
 .place-logo {
   grid-area: logo;
   align-self: center;
@@ -63,13 +76,102 @@ body{
   display: inline-block;
 }
 
+@media only screen and (max-width: 750px) {
+  .place-sub-line{
+    display: none;}
+
+  .place-sub-line:after{
+    display: none;
+  }
+}
+
 a {
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 12px;
   font-weight: 300;
   color: white;
 }
 
-a:hover {
-  font-weight: 400;
+.menu {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  /*NAVBAR reveal styling*/
+
+
+  a.home-nav {
+    color:white;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform:uppercase;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .menu{
+    opacity: 1;
+    z-index: 10;
+    position: fixed; 
+  }
+
+  .drop-b{
+    /*styling got the menu button*/
+    position: fixed; 
+    width: 68px;
+    height: 30px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius:12px;
+
+    font-size: 14px;
+  	font-weight: 400;
+  }
+
+  .dropdown-content{
+    /*the menu style when on hover*/
+
+    display: none;
+    transition: 0.5s;
+  }
+
+  .dropdown-content a{
+    display: block;
+    font-size:10px;
+  	font-weight: normal;
+  	text-align: left;
+    margin-top: 10px;
+  }
+
+  .dropdown-content a:hover{
+    font-weight: 500;
+
+  }
+
+  .drop-b:hover .dropdown-content {
+    display: block;
+    transition: 0.5s;
+    font-weight: 200;
+  }
+
+  .menu:hover .drop-b{
+    font-weight: 300;
+    transition: 0.5s;
+    height:165px;
+    width:130px;
+    padding-bottom: 5px;
+    padding-left: 10px; /*must keep to align with Menu*/
+  }
+
+  .drop-b:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 12px;
+    transition: 0.5s;
+    padding-left: 15px;
+
+    text-align: left;
+  }
 }

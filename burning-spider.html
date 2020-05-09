@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/album-page.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/nav-bar.css">
+  <script src="/assets/stylesheets/nav-bar.js"></script>
+  <script src="/assets/javascript/footer.js"></script>
+  <script src="/assets/javascript/light-box.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+  <div id="nav"></div>
+
+  <script>
+  $(function(){
+    $("#nav").load("nav-bar.html");
+  });
+  </script>
+  <section class="page-style">
+
+    <div class="main">
+      <!--Album Title-->
+      <h2>The Burning Spider</h2>
+
+      <a id="back" href="albums.html"onclick="history.back();returnfalse">
+        Back
+      </a>
+
+      <div class="info">
+
+        <div class="song-info">
+          <table>
+            <tbody>
+              <!--Track 1-->
+              <tr>
+                <td class="align">1</td>
+                <td><h class="head">The Burning Spider ft. – Lightnin' Hopkins</h>
+                  <p class="cap">Piano – Willie Larsson Jr.<br>
+                    Written-By – Clarence L. Lewis*, Sam Hopkins*, M. Füreder*, Morris Levy</p>
+                  </td>
+                  <td class="align">4:14</td>
+                </tr>
+                <!--Track 2-->
+                <tr>
+                  <td class="align">2</td>
+                  <td><h class="head">TStep Two ft. – Lilja Bloom</h>
+                    <p class="cap">Written-By – Marcus Füreder</p>
+                  </td>
+                  <td class="align">3:04</td>
+                </tr>
+                <!--Track 3-->
+                <tr>
+                  <td class="align">3</td>
+                  <td><h class="head">Soul Fever Blues ft. – Muddy Waters</h>
+                    <p class="cap">Guitar – Michael Wittner<br>
+                      Written-By – Marcus Füreder, McKinley Morganfield</p>
+                    </td>
+                    <td class="align">3:07</td>
+                  </tr>
+                  <!--Track 4-->
+                  <tr>
+                    <td class="align">4</td>
+                    <td><h class="head">Everything Of My Heart</h>
+                      <p class="cap">Guitar – Johnny Sommerer<br>
+                        Trumpet – Jerry Di Monza<br>
+                        Written-By – Marcus Füreder<br></p>
+                      </td>
+                      <td class="align">3:07</td>
+                    </tr>
+                    <!--Track 5-->
+                    <tr>
+                      <td class="align">5</td>
+                      <td><h class="head">My Man ft. – Lightnin' Hopkins</h>
+                        <p class="cap">Strings – Christian Wirth (2), Johnny Sommerer<br>
+                          Written-By – Sam Hopkins*, Marcus Füreder</p>
+                        </td>
+                        <td class="align">4:10</td>
+                      </tr>
+                      <!--Track 6-->
+                      <tr>
+                        <td class="align">6</td>
+                        <td><h class="head">All Grown Up ft. – Anduze</h>
+                          <p class="cap">Guitar – Johnny Sommerer<br>
+                            Written-By – Lee Anduze, Marcus Füreder</p>
+                          </td>
+                          <td class="align">3:00</td>
+                        </tr>
+                        <!--Track 7-->
+                        <tr>
+                          <td class="align">7</td>
+                          <td><h class="head">Mama Talking</h>
+                            <p class="cap">Arranged By – Parov Stelar<br>
+                              Featuring – Stuff Smith<br>
+                              Written-By – Bob Rothberg, Joseph Meyer</p>
+                            </td>
+                            <td class="align">2:58</td>
+                          </tr>
+                          <!--Track 8-->
+                          <tr>
+                            <td class="align">8</td>
+                            <td><h class="head">State Of The Union ft. – Anduze</h>
+                              <p class="cap">Guitar – Michael Wittner<br>
+                                Written-By – Lee Anduze, Marcus Füreder</p>
+                              </td>
+                              <td class="align">3:36</td>
+                            </tr>
+                            <!--Track 9-->
+                            <tr>
+                              <td class="align">9</td>
+                              <td><h class="head">Beauty Mark ft. – Anduze</h>
+                                <p class="cap">Guitar – Michael Wittner<br>
+                                  Strings – Christian Wirth (2), Johnny Sommerer<br>
+                                  Written-By – Lee Anduze, Marcus Füreder</p>
+                                </td>
+                                <td class="align">3:23</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!--END Album song titles-->
+                        </div>
+
+                        <!--Album Photo-->
+                        <div class="cover-pic-wrap">
+                          <img class="cover-pic" src="assets/images/Albums/Burning Spider imgs.png"
+                          onclick="openLightbox()"/>
+                          <p id="price">Price: 15,00 €</p>
+                        </div>
+
+                        <div id="Lightbox" class="modal">
+                          <span class="close pointer" onclick="closeLightbox()">&times;</span>
+                          <div class="modal-content">
+                              <img class="cover-pic" src="assets/images/Albums/Burning Spider imgs.png"/>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+
+                    <div class="place-footer" id="footer"></div>
+
+                    <script>
+                    $(function(){
+                      $("#footer").load("footer.html");
+                    });
+                    </script>
+
+                  </section>
+
+                </body>
+                </html>

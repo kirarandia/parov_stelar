@@ -4,41 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
-  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/nav-bar.css">
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/albums.css">
-  <link rel="stylesheet" type="text/css" href="/assets/javascript/footer.js">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/nav-bar.css">
+  <script src="/assets/javascript/nav-bar.js"></script>
+  <script src="/assets/javascript/footer.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-  <body>
-    <div id="nav"></div>
+<body>
+  <div id="nav"></div>
 
-      <script>
-        $(function(){
-        $("#nav").load("nav-bar.html");
-        });
-      </script>
+  <script>
+  $(function(){
+    $("#nav").load("nav-bar.html");
+  });
+  </script>
 
-      <section class="page-style">
+  <section class="page-style">
 
-        <div class="main">
-          <h1>Albums</h1>
+    <div class="main">
+      <h1>Albums</h1>
+      <section class="albums">
 
-          <a href="#">
-            <img src="assets/images/Albums/Parov Stellar Burning Spider album cover.jpeg">
-          </a>
+        <div class="cover-image-wrapper">
+        <a class="cover-image" href="burning-spider.html">
+          <img src="assets/images/Albums/Burning Spider album cover.jpeg">
+        </a>
+      </div>
 
-        </div>
+      <div class="cover-image-wrapper">
+        <a class="cover-image"href="#">
+          <img src="assets/images/Albums/Live at Pukkelpop.jpg">
+        </a>
+      </div>
+      <div class="cover-image-wrapper">
+        <a class="cover-image" href="#">
+          <img src="assets/images/Albums/Demon Diaries album cover.jpg">
+        </a>
+      </div>
+      <div class="cover-image-wrapper">
+        <a class="cover-image" href="#">
+          <img src="assets/images/Albums/Princess album cover.jpg">
+        </a>
+      </div>
+      <div class="cover-image-wrapper">
+        <a class="cover-image" href="#">
+          <img src="assets/images/Albums/Princess2 album cover.jpg">
+        </a>
+      </div>
+      <div class="cover-image-wrapper">
+        <a class="cover-image" href="#">
+          <img src="assets/images/Albums/Coco album cover.jpeg">
+        </a>
+      </div>
+      <div class="cover-image-wrapper">
+        <a class="cover-image" href="#">
+          <img src="/assets/images/Albums/Coco2 album cover.jpg">
+        </a>
+      </div>
+      <div class="cover-image-wrapper">
+        <a class="cover-image" href="#">
+          <img src="assets/images/Albums/Shine album cover.jpg">
+        </a>
+      </div>
+      <div class="cover-image-wrapper">
+        <a class="cover-image" href="#">
+          <img src="assets/images/Albums/Seven and Storm album cover.jpg">
+        </a>
+      </div>
+      <div class="cover-image-wrapper">
+        <a class="cover-image" href="#">
+          <img src="assets/images/Albums/Rough Cuts album cover.jpg">
+        </a>
+      </div>
 
-        <div class="place-footer" id="footer"></div>
+      </div>
+    </div>
 
-        <script>
-        $(function(){
-          $("#footer").load("footer.html");
-        });
-        </script>
+    <div class="place-footer" id="footer"></div>
 
-      </section>
+    <script>
+    $(function(){
+      $("#footer").load("footer.html");
+    });
+    </script>
 
-  </body>
+  </section>
+
+</body>
 </html>

@@ -1,53 +1,51 @@
-/* Change navbar styling on small viewports */
-@media (max-width: 991.98px) {
-    .navbar {
-        background: #fff;
-    }
-
-    .navbar .navbar-brand, .navbar .nav-link {
-        color: #555;
-    }
-}
-
 .top-screen {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 10% auto 20%;
+  grid-template-columns: 10%  auto 20%;
   grid-template-areas:
   "navbar . logo-place";
   grid-gap: 10px;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 1.5rem;
+  /* box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2); */
 }
 
 .logo {
+  float: right;
+  display: grid;
   grid-area: logo-place;
-  justify-self: end;
-  background-color: ;
+  justify-content: end;
 }
 
-a {
-  color:black;
-  text-decoration: none;
-  text-transform:uppercase;
+@media only screen and (max-width: 750px) {
+  .logo{
+    display: none;
+  }
+}
+
+.menu{
+  grid-area: navbar;
+  position: absolute; 
 }
 
 .drop-b{
   /*styling got the menu button*/
+  position: absolute; 
+  z-index: 10;
   width: 68px;
   height: 30px;
   border: none;
+  background-color: white;
   border-radius:12px;
-  padding: ;
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
 
   font-size: 14px;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 .dropdown-content{
   /*the menu style when on hover*/
   display: none;
+  transition: 0.5s;
 }
 
 .dropdown-content a{
@@ -60,24 +58,29 @@ a {
 
 .dropdown-content a:hover{
   font-weight: 500;
+
 }
 
 .drop-b:hover .dropdown-content {
   display: block;
+  transition: 0.5s;
 }
 
 .menu:hover .drop-b{
-  height:190px;
+  transition: 0.5s;
+  height:165px;
   width:130px;
+  padding-bottom: 5px;
+  padding-left: 10px; /*must keep to align with Menu*/
 }
 
 .drop-b:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, .9);
   box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 12px;
   transition: 0.5s;
-  padding: 10px;
+  padding-left: 15px;
 
   text-align: left;
 }
