@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/media.css">
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/nav-bar.css">
+  <script src="https://kit.fontawesome.com/0fa946895e.js" crossorigin="anonymous"></script>
   <script src="/assets/javascript/video-light-box.js"></script>
   <script src="/assets/javascript/nav-bar.js"></script>
   <script src="/assets/javascript/footer.js"></script>
@@ -32,59 +33,206 @@
       <h1>Media</h1>
       <p class="category">Music Videos</p>
       <!--holds the videos-->
-      <div class="page-container">
 
-        <!--video#1-->
-        <div class="video-container">
-          <!--poster image for the video-->
-          <img class="cover" src="assets/images/Grandpas groove snapshot.jpg"/>
-          <!--layer above the image-->
-          <div class="top-layer">
-            <!--PLAY button displayed, low opacity-->
-            <div class="play-button"><input type="image" src="assets/images/Play button.png"
-            id="playme" onclick="revealVideo('video','youtube')"/></div>
-            <!--title hidden, on hover revealed-->
-          <div class="text-reveal">
-            <p class="title">Granpa's Groove<br>
-            <p class="feat">ft.Aron Chupa</p></div>
-          </div>
-            <!--END of top-layer-->
-          </div>
-          <!--end of video#1-->
-          
-      <!--video#2-->
-      <div class="video-container">
-        <!--poster image for the video-->
-        <img class="cover" src="assets/images/mama talking 2.png"/>
-        <!--video title-->
-        <div class="top-layer">
-          <div class="play-button"><input type="image" src="assets/images/Play button.png"
-          id="playme" onclick="revealVideo('video','youtube')"/></div>
-          <div class="text-reveal">
-          <p class="title">Granpa's Groove<br>
-          <p class="feat">ft.Aron Chupa</p></div>
-        </div>
-          <!--END of top-layer-->
-        </div>
-        <!--END of video#2-->
+      <div class="container">
 
-        <!--video#3-->
-        <div class="video-container">
-          <!--poster image for the video-->
-          <img class="cover" src="assets/images/The Sun (feat. Graham Candy)2.png"/>
-          <!--video title-->
-          <div class="top-layer">
-            <div class="play-button"><input type="image" src="assets/images/Play button.png"
-            id="playme" onclick="revealVideo('video','youtube')"/></div>
-            <div class="text-reveal">
-            <p class="title">Granpa's Groove<br>
-            <p class="feat">ft.Aron Chupa</p></div>
+        <!--video1-->
+        <div class="module">
+          <div class="mid">
+            <p class="title">Grandpa's Groove</br>ft. Aron Chupa</p>
           </div>
-            <!--END of top-layer-->
+          <div class="mid play">
+            <button onclick="revealVideo('video1','youtube1')">
+              <i class="far fa-play-circle"></i>
+            </button>
           </div>
-          <!--END of video#3-->
+          <div class="overlay">
+            <img class="img-box" src="assets/images/Grandpas Groove snapshot.jpg"/>
+          </div>
+          <!--video#1 lightbox-->
+          <div id="video1" class="lightbox" onclick="hideVideo('video1','youtube1')">
+            <div class="lightbox-container">
+              <div class="lightbox-content">
+
+                <button onclick="hideVideo('video1','youtube1')" class="lightbox-close">
+                &times;
+                </button>
+                <div class="video-container">
+                  <video width="960" height="540" controls>
+                    <source src="assets/videos/Parov Stelar-Grandpas Grooves_1080p.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+                <!--   <iframe id="youtube1" width="960" height="540" src="https://www.youtube.com/embed/znrEGeYsq9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!--END of video#1 lightbox-->
+        </div>
+        <!-- END of video1 -->
+
+        <!--video2-->
+        <div class="module">
+          <div class="mid">
+            <p class="title">Mama Talking</br> ft. Stuff Smith</p>
+          </div>
+          <div class="mid play">
+            <button onclick="revealVideo('video2','youtube2')">
+              <i class="far fa-play-circle"></i>
+            </button>
+            </div>
+          <div class="overlay">
+            <img class="img-box" src="assets/images/mama talking 2.png"/>
+          </div>
+
+          <!--video#2 lightbox-->
+          <div id="video2" class="lightbox" onclick="hideVideo('video2','youtube2')">
+            <div class="lightbox-container">
+              <div class="lightbox-content">
+                <button onclick="hideVideo('video2','youtube2')" class="lightbox-close">
+                &times;
+                </button>
+                <div class="video-container">
+                  <iframe id="youtube2" width="960" height="540" src="https://www.youtube.com/embed/0E37_n9dzUg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--END of video#2 lightbox-->
+        </div>
+
+        <!-- END of video2-->
+
+        <!--video3-->
+        <div class="module">
+          <div class="mid">
+            <p class="title">The Sun</br> ft. Graham Candy</p>
+          </div>
+          <div class="mid play">
+            <button onclick="revealVideo('video3','youtube3')">
+              <i class="far fa-play-circle"></i>
+            </button>
+            </div>
+          <div class="overlay">
+            <img class="img-box" src="assets/images/The Sun2.png"/>
+          </div>
+
+          <!--video#2 lightbox-->
+          <div id="video3" class="lightbox" onclick="hideVideo('video3','youtube3')">
+            <div class="lightbox-container">
+              <div class="lightbox-content">
+                <button onclick="hideVideo('video3','youtube3')" class="lightbox-close">
+                &times;
+                </button>
+                <div class="video-container">
+                  <iframe id="youtube3" width="960" height="540" src="https://www.youtube.com/embed/WTrNsAsjEmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!--END of video#2 lightbox-->
+        </div>
+        <!-- END of video3-->
+
+        <!--video4-->
+        <div class="module">
+          <div class="mid">
+            <p class="title">Jimmy's Gang</p>
+          </div>
+          <div class="mid play">
+            <button onclick="revealVideo('video4','youtube4')">
+              <i class="far fa-play-circle"></i>
+            </button>
+          </div>
+          <div class="overlay">
+            <img class="img-box" src="assets/images/Jimmys gang2.png"/>
+          </div>
+          <!--video#1 lightbox-->
+          <div id="video4" class="lightbox" onclick="hideVideo('video4','youtube4')">
+            <div class="lightbox-container">
+              <div class="lightbox-content">
+
+                <button onclick="hideVideo('video4','youtube4')" class="lightbox-close">
+                &times;
+                </button>
+                <div class="video-container">
+                  <iframe id="youtube4" width="960" height="540" src="https://www.youtube.com/embed/7fkOqXAHLKQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+          <!--END of video#4 lightbox-->
+        </div>
+        <!-- END of video4-->
+
+        <!--video5-->
+        <div class="module">
+          <div class="mid">
+            <p class="title">Clap Your Hands</p>
+          </div>
+          <div class="mid play">
+            <button onclick="revealVideo('video5','youtube5')">
+              <i class="far fa-play-circle"></i>
+            </button>
+          </div>
+          <div class="overlay">
+            <img class="img-box" src="assets/images/Clap Your hands.png"/>
+          </div>
+          <!--video#1 lightbox-->
+          <div id="video5" class="lightbox" onclick="hideVideo('video5','youtube5')">
+            <div class="lightbox-container">
+              <div class="lightbox-content">
+
+                <button onclick="hideVideo('video5','youtube5')" class="lightbox-close">
+                &times;
+                </button>
+                <div class="video-container">
+                  <iframe id="youtube5" width="960" height="540" src="https://www.youtube.com/embed/EHs7Av5TZhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+          <!--END of video#5 lightbox-->
+        </div>
+        <!-- END of video5-->
+
+        <!--video6-->
+        <div class="module">
+          <div class="mid">
+            <p class="title">Brass Devil</p>
+          </div>
+          <div class="mid play">
+            <button onclick="revealVideo('video6','youtube6')">
+              <i class="far fa-play-circle"></i>
+            </button>
+          </div>
+          <div class="overlay">
+            <img class="img-box" src="assets/images/Brass Devil.png"/>
+          </div>
+          <!--video#1 lightbox-->
+          <div id="video6" class="lightbox" onclick="hideVideo('video6','youtube6')">
+            <div class="lightbox-container">
+              <div class="lightbox-content">
+
+                <button onclick="hideVideo('video6','youtube6')" class="lightbox-close">
+                &times;
+                </button>
+                <div class="video-container">
+                  <iframe id="youtube6" width="960" height="540" src="https://www.youtube.com/embed/0kmTzotaHzM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!--END of video#5 lightbox-->
+        </div>
+        <!-- END of video6-->
 
       </div>
+
       <!--END of page-container-->
     </div>
     <!--END of main-->

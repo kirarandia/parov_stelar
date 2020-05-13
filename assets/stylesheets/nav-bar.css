@@ -26,12 +26,13 @@
 .menu{
   grid-area: navbar;
   position: absolute; 
+  z-index: 1000;
 }
 
 .drop-b{
   /*styling got the menu button*/
   position: absolute; 
-  z-index: 10;
+  z-index: 1000;
   width: 68px;
   height: 30px;
   border: none;
@@ -45,7 +46,7 @@
 .dropdown-content{
   /*the menu style when on hover*/
   display: none;
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
 .dropdown-content a{
@@ -64,6 +65,7 @@
 .drop-b:hover .dropdown-content {
   display: block;
   transition: 0.5s;
+  z-index: 1000;
 }
 
 .menu:hover .drop-b{
@@ -72,6 +74,7 @@
   width:130px;
   padding-bottom: 5px;
   padding-left: 10px; /*must keep to align with Menu*/
+  z-index: 1000;
 }
 
 .drop-b:hover {

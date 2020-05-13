@@ -7,10 +7,10 @@ body {
   display: grid;
   align-content: space-evenly; /*space-between*/
   grid-template-columns:
-	10% auto 10%;
+	10% 1fr 10%;
 
 	grid-template-rows:
-	auto
+	1fr
 	10%;
 
   grid-template-areas:
@@ -26,12 +26,13 @@ a.nav {
   padding-right: 5px;
 }
 
-	.main{
-		/*man content layout*/
+.main {
+		/*main content layout*/
+		/* background-color: yellow; */
 	  grid-area: main;
 	  display: grid;
-		align-content: top;
-		align-items: center;
+		/* align-content: top; */
+		/* align-items: center; */
 	  justify-self: center;
 	}
 
@@ -128,28 +129,40 @@ img{
   heght: 100%;
 }
 
-p.text{
+.text{
 	/*text boxes styles*/
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: normal;
-	line-height: 1.5rem;
+	line-height: 2rem;
   text-decoration: none;
 	text-align: center;
   font-weight: normal;
   font-kerning: normal;
 	margin-top:0;
-	margin-bottom: 1rem;
+	padding-bottom: 15px;
+}
+
+.link {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 2rem;
+  text-decoration: none;
+	text-align: left;
+  font-weight: normal;
+  font-kerning: normal;
+	margin-top:0;
+	padding-bottom: 20px;
 }
 
 @media only screen and (max-width: 750px) {
-	p.text {
-		text-align: left;
+	.text {
+		text-align: justify;
 		line-height: 2rem;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 	}
 }
 
-p.text > a{
+.link > a{
 	/*all liinks within text*/
 	color: #5FC9EC;
 	font-weight: normal;
@@ -161,6 +174,9 @@ p.category{
 	letter-spacing: 1px;
 	font-weight: 300;
 	text-align: left;
+	margin-top: 0px;
+	/* margin: 0;
+	padding: 0; */
 }
 
 

@@ -1,125 +1,208 @@
-.page-container {
+.container {
   display: grid;
-  grid-template-columns: repeat (auto-fit, 327px);
-  grid-template-rows: repeat (auto-fit, 160px);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat 1fr;
+  margin-top: 0px;
+  padding: 0;
   gap: 30px;
-  place-items: top;
+  /* justify-content: space-between; */
+}
+
+/* .col{
+  flex: 1;
+  padding: 10px 10px 10px 10px;
+  background-color: green;
+} */
+
+.module {
+  /*container*/
+  background-color: grey;
+  width: 327px;
+  height: 161px;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 0;
+  position: relative;
+  transition: 0.6s ease-in-out;
+  /* float: left; */
+}
+
+.module .title {
+  /*title style*/
+  opacity: 1;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  /* background-color: grey; */
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  /* transition: 0.6s ease; */
+}
+
+.module:hover .title{
+  /* transition: 0.5s ease-in-out; */
+  opacity: 0;
+}
+
+.mid {
+  /*text placement*/
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  transform: translate(0%, -50%);
+}
+
+.play {
+  opacity: .5;
+  display: none;
+  transition: 0.6s ease-in-out;
+}
+
+.module:hover .play{
+  display: block;
+  opacity: 1;
+}
+
+.play button{
+  background-color: transparent;
+  outline: 0 !important;
+  border: none:
+  padding: 2px;
+  border-style: none;
+  margin: 2px;
+  z-index: 100;
+
+  opacity: .9;
+  color: white;
+  font-size: 4rem;
+  font-weight: 300;
+  text-align: center;
+
+}
+
+.play:hover button {
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.module:hover .img-box{
+  opacity: .5;
+}
+
+.img-box {
+  opacity: .9;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s ease-in-out;
+}
+
+ .img-box img{
+  display: block;
+  object-fit: fill;
+  max-width: 327px;
+  max-height: 161px;
   margin: 0;
   padding: 0;
-  justify-content: space-evenly;
-  align-content: start;
-  grid-template-areas:
-  "mv mv mv"
-  "mv mv mv"
 }
-/*container for individual video*/
-.video-container{
+
+/*LIGHTBOX*/
+.lightbox {
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: scroll;
+  position: fixed;
+  display: none;
+  z-index: 20;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.lightbox-container {
   position: relative;
-  text-align: center;
-  top: 0;
-  margin-top: 0;
-  padding-top: 0;
-}
-
-/*poster position*/
-.cover {
-  opacity: 1;
+  max-width: 960px;
+  margin: 7% auto;
   display: block;
-  min-width: auto;
-  height: 100%;
-  object-fit: fit;
-
-}
-/**/
-.cover > img{
-  height: 100%;
-  width: 100%;
+  padding: 0 3%;
+  height: auto;
+  z-index: 90;
 }
 
+.lightbox-content {
+    box-shadow: 0 1px 6px fade(black, 70%);
+  }
 
-/*container for text and button*/
-.top-layer {
-  position: absolute;
-  opacity: 1;
-  top: 0;
-  left: 0;
-  margin-top: 0;
-  width: 100%;
-  height: 100%;
-
-  /*smooth transition on hover*/
-    -moz-transition: all 0.4s ease-in-out 0s;
-  	-webkit-transition: all 0.4s ease-in-out 0s;
-  	-ms-transition: all 0.4s ease-in-out 0s;
-  	transition: all 0.4s ease-in-out 0s;
-}
-/*centered position of the button*/
-.play-button {
-  opacity: .5;
-  position: absolute;
-  width: 100%; /*vertic keeps object centered*/
-  height: 0; /*horiz keeps objects centered*/
-  top: 25%;
-  background-color: grey;
-  margin-top: 0;
-  text-align: center;
-}
-/*button full opacity on hover*/
-.play-button:hover{
-  opacity: 1;
-}
-
-/*position of title on top and centered*/
-.text-reveal {
-  opacity: 0;
-  position: absolute;
-  width: 100%; /*vertic keeps object centered*/
-  height: ; /*increses size of the box, doesn't shift text*/
-  /* background-color: yellow; */
-  top: 75%;
-  left: 0;
-  margin-top: 0;
-  text-align: center;
-
-/*smooth transition on hover*/
-  -moz-transition: all 0.4s ease-in-out 0s;
-	-webkit-transition: all 0.4s ease-in-out 0s;
-	-ms-transition: all 0.4s ease-in-out 0s;
-	transition: all 0.4s ease-in-out 0s;
-}
-/*reveal title on hover*/
-.video-container:hover .text-reveal,
-.video-container.active .text-reveal {
-  opacity: 1;
-}
-/*full container covered with dark overlay on hover*/
-.video-container:hover .top-layer{
-  background-color: rgba(0, 0, 0, 0.5);
-}
-/*video title text style*/
-.title {
-  top: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0 0 0 0;
-
-  color: white;
-  font-size: 18px;
-  font-weight: normal;
-  letter-spacing: .8px;
+.lightbox-close {
+  z-index: 100;
   text-transform: uppercase;
-  text-align: center;
-  /* background-color: grey; */
-  /* vertical-align: center; */
-}
-/*feature line text style*/
-.feat {
+  background: transparent;
+  position: absolute;
+  display: block;
+  border: none;
   color: white;
-  text-align: center;
-  font-size: 10px;
-  letter-spacing: .8px;
-  text-transform: uppercase;
-  margin-top: 0;
-  padding: 0;
-  /* background-color: grey; */
+  right: 5px;
+  top: -10%;
+  font-size: 35px;
+}
+
+.lightbox-close:hover{
+  cursor: pointer;
+  font-size: 35.5px;
+}
+
+.video-container {
+    padding-bottom: 45%;
+    position: relative;
+    padding-top: 30px;
+    overflow: hidden;
+    height: 0;
+}
+
+.video-container iframe,
+.video-container video,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}/*END of LIGHTBOX*/
+
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat 1fr;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+
+  .container {
+    /* display: grid; */
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat 1fr; */
+    /* margin: 0;
+    padding: 0;
+    gap: 30px; */
+    /* justify-content: space-between; */
+  }
 }

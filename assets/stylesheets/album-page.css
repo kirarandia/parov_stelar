@@ -7,7 +7,30 @@
   margin-top:;
   align-content: start;
   grid-template-areas:
-  "songs pic"
+  "songs pic";
+}
+
+@media only screen and (max-width: 1000px) {
+  h2{
+    font-size: 20px;
+    letter-spacing: .5rem;
+  }
+
+  .main{
+    padding-top: 3rem;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    grid-template-areas:
+    "pic"
+    "songs";
+  }
 }
 
 .song-info {
@@ -20,6 +43,8 @@
   position: relative;
   width: 390px;
   height: 377px;
+  margin: 0;
+  padding: 0;
   align-content: end;
   padding-left: 1rem;
 }
@@ -32,7 +57,8 @@
   position: relative;
   left: 0;
   right: 0;
-  margin: ;
+  margin: 0;
+  padding: 0;
   border-radius: 0;
   overflow: hidden;
   z-index: 0;
@@ -42,6 +68,8 @@
 .cover-pic > img {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .modal {
@@ -70,8 +98,8 @@
 .close {
   color: grey;
   position: absolute;
-  top: 10px;
-  right: 25px;
+  top: 2%;
+  right: 2%;
   font-size: 35px;
   font-weight: normal;
 }
@@ -90,7 +118,7 @@
 
 #back{
   font-weight: 300;
-  font-size: 6px;
+  font-size: 8px;
   text-align: left;
   color:black;
   text-decoration: none;
@@ -105,7 +133,7 @@
 }
 
  #price {
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   text-align: right;
   padding: 0;
