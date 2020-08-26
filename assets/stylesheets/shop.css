@@ -1,107 +1,108 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat 1fr;
+  gap: 30px;
+  margin-top: 0px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  justify-content: space-evenly;
+  /* align-content: center; */
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.item {
+  display: inline-block;
+  position: relative;
+  text-align: ;
+  width: 191px;
+  height: 220px;
+  margin: 0;
+  padding: 10px 10px 10px 10px;
+  transition: 0.6s ease-in-out;
+  /* background-color: grey; */
+}
+
+.item .title {
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 12px;
+
+  display: block;
   margin-top: 0px;
   padding: 0;
-  gap: 30px;
-  /* justify-content: space-between; */
+  border-collapse: collapse;
 }
 
-/*container for individual video*/
-.shop-item{
-  width: 291px;
-  height: 291px;
-  position: relative;
-  text-align: center;
-  top: 0;
-  margin-top: 0;
-  padding-top: 0;
-}
+#left{text-align:left;}
+#right{text-align: right; font-weight: 500;}
 
-/*poster position*/
-.cover {
-  opacity: 1;
-  display: block;
-  width: 192;
-  height: 291px;
-  overflow: hidden;
-}
-/**/
-.cover > img{
-  height: 100%;
+.item table{
   width: 100%;
+  table-layout: fixed;
 }
 
-
-/*container for text*/
-.top-layer {
-  position: absolute;
-  opacity: 1;
-  top: 0;
-  left: 0;
-  margin-top: 0;
-  width: 100%;
-  height: 100%;
-
-  /*smooth transition on hover*/
-    -moz-transition: all 0.4s ease-in-out 0s;
-  	-webkit-transition: all 0.4s ease-in-out 0s;
-  	-ms-transition: all 0.4s ease-in-out 0s;
-  	transition: all 0.4s ease-in-out 0s;
+td{
+  word-wrap: break-word;
+  vertical-align: middle;
 }
 
-/*position of title on top and centered*/
-.text-reveal {
-  opacity: 0;
-  position: absolute;
-  width: 100%; /*vertic keeps object centered*/
-  height: ; /*increses size of the box, doesn't shift text*/
-  /* background-color: yellow; */
-  top: 75%;
-  left: 0;
-  margin-top: 0;
-  text-align: center;
+td:nth-child(1){
+  width: 80%
+}
+td:nth-child(2){
+  width: 20%;
+}
 
-/*smooth transition on hover*/
-  -moz-transition: all 0.4s ease-in-out 0s;
-	-webkit-transition: all 0.4s ease-in-out 0s;
-	-ms-transition: all 0.4s ease-in-out 0s;
-	transition: all 0.4s ease-in-out 0s;
-}
-/*reveal title on hover*/
-.shop-item:hover .text-reveal,
-.shop-item.active .text-reveal {
-  opacity: 1;
-}
-/*full container covered with dark overlay on hover*/
-.shop-item:hover .top-layer{
-  background-color: rgba(0, 0, 0, 0.5);
-}
-/* title text style*/
-.title {
-  top: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0 0 0 0;
-
-  color: white;
-  font-size: 18px;
-  font-weight: normal;
-  letter-spacing: .8px;
-  text-transform: uppercase;
-  text-align: center;
-  /* background-color: grey; */
-  /* vertical-align: center; */
-}
-/*feature line text style*/
-.feat {
-  color: white;
-  text-align: center;
-  font-size: 10px;
-  letter-spacing: .8px;
-  text-transform: uppercase;
-  margin-top: 0;
+.img-container {
+  display: inline-block;
+  width: 191px;
+  height: 191px;
+  /* position: absolute;
+  left: 0%;
+  right: 0; */
+  /* margin-bottom: 25px; */
+  margin: 0;
   padding: 0;
-  /* background-color: grey; */
+  /* background-color: yellow; */
+}
+
+.img-box {
+  width: 181px;
+  height: 181px;
+  display: block; /*inline-block allows to center image within div*/
+  position: absolute;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+  transition: .3s ease-in-out;
+  /* background-color: yellow; */
+  /* box-shadow: ; */
+  margin: 0;
+  padding: 0;
+}
+
+.img-box > img {
+  /* display: block; */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.img-box:hover {
+  width: 191px;
+  height: 191px;
 }

@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat 1fr;
-  margin-top: 0px;
-  padding: 0;
+  /* justify-self: center; */
+  /* background-color: pink; */
+  margin: 5px;
   gap: 30px;
   /* justify-content: space-between; */
 }
@@ -16,7 +17,7 @@
 
 .module {
   /*container*/
-  background-color: grey;
+  /* background-color: grey; */
   width: 327px;
   height: 161px;
   padding: 10px 10px 10px 10px;

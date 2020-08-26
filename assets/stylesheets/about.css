@@ -1,0 +1,13 @@
+.container {
+  display: block;
+  justify-self: center;
+  /* background-color: pink; */
+  margin-right: 50px;
+  margin-left: 50px;
+  max-width: 520px;
+}
+
+.text{
+	/*text boxes styles*/
+	text-align: justify;
+}

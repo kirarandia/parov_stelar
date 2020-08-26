@@ -4,54 +4,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
-  <link rel="stylesheet" type="text/css" href="assets/stylesheets/shop.css">
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/albums.css">
   <link rel="stylesheet" type="text/css" href="assets/stylesheets/nav-bar.css">
-  <link rel="stylesheet" type="text/css" href="assets/stylesheets/nav-bar.js">
-  <link rel="stylesheet" type="text/css" href="assets/javascript/footer.js">
+  <script src="assets/javascript/nav-bar.js"></script>
+  <script src="assets/javascript/footer.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
-  <!--insert Navigation-->
   <div id="nav"></div>
-  <!--END-->
-  <!--navigation SCRIPT-->
+
   <script>
   $(function(){
     $("#nav").load("nav-bar.html");
   });
   </script>
-  <!--END of navigation SCRIPT-->
 
-<!--standard layout-->
   <section class="page-style">
-    <!--main content layout-->
+
     <div class="main">
-      <!--page title-->
       <h1>Shop</h1>
-      <!--holds shop items-->
       <section class="container">
 
-        <div class="shop-item">
-          <a class="cover" href="shop.html"><img src="assets/images/Shop/bag.png"></a>
-          <div class="top-layer">
-
+        <!--ALBUM1-->
+        <div class="item">
+          <!-- <div class="img-container"> -->
+          <div class="img-container">
+              <a class="img-box" href="https://parovstelar.loveyourartist.store/de/products/5f0871013159037ff1531afd" target="_blank"><img src="assets/images/Shop/bag.png">
+              </a>
           </div>
-          <!--END of top-layer-->
-        </div>
-        <!--END of shop-item#1-->
-      <div class="shop-item">
-        <a class="cover" href="shop.html">
-          <img src="assets/images/Shop/sweatshirt-F.png"></a>
-        <div class="top-layer">
 
+            <div class="title">
+              <table>
+                  <tr>
+                    <td id="left">Robo Bag</td>
+                    <td id="right">$10.00</td>
+                  </tr>
+              </table>
+            </div>
         </div>
-        <!--END of top-layer-->
+        <!--END of ALBUM1-->
+
+        <!--ALBUM2-->
+        <div class="item">
+          <!-- <div class="img-container"> -->
+          <div class="img-container">
+              <a class="img-box" href="https://parovstelar.loveyourartist.store/de/products/5f087a4f3159037bee531c0e" target="_blank"><img src="assets/images/Shop/shirt1 F.png">
+              </a>
+          </div>
+            <div class="title">
+              <table>
+                  <tr>
+                    <td id="left">T-Shirt Gringo<br>Women</td>
+                    <td id="right">$25.00</td>
+                  </tr>
+              </table>
+            </div>
+        </div>
+        <!--END of ALBUM2-->
+
+        <!--ALBUM3-->
+        <div class="item">
+          <!-- <div class="img-container"> -->
+          <div class="img-container">
+              <a class="img-box" href="https://parovstelar.loveyourartist.store/de/products/5f087b96315903fef7531c3c" target="_blank"><img src="assets/images/Shop/shirt1 M.png">
+              </a>
+          </div>
+            <div class="title">
+              <table>
+                  <tr>
+                    <td id="left">T-Shirt Gringo Black <br> Men</td>
+                    <td id="right">$24.00</td>
+                  </tr>
+              </table>
+            </div>
+        </div>
+        <!--END of ALBUM3-->
+
+        <!--ALBUM4-->
+        <div class="item">
+          <!-- <div class="img-container"> -->
+          <div class="img-container">
+              <a class="img-box" href="https://parovstelar.loveyourartist.store/de/products/5f087b0bc8db32806f90cd51" target="_blank"><img src="assets/images/Shop/Shop shirt man2.png"></a>
+          </div>
+            <div class="title">
+              <table>
+                  <tr>
+                    <td id="left">Robo Men Black</td>
+                    <td id="right">$24.00</td>
+                  </tr>
+              </table>
+            </div>
+        </div>
+        <!--END of ALBUM4-->
+
+        <!--ALBUM5-->
+        <div class="item">
+          <!-- <div class="img-container"> -->
+          <div class="img-container">
+              <a class="img-box" href="https://parovstelar.loveyourartist.store/de/products/5f08788cc8db32b54d90cd06" target="_blank"><img src="assets/images/Shop/sweatshirt-F.png"></a>
+          </div>
+            <div class="title">
+              <table>
+                  <tr>
+                    <td id="left">Black Red Robo Print <br>Unisex</td>
+                    <td id="right">$40.00</td>
+                  </tr>
+              </table>
+            </div>
+        </div>
+        <!--END of ALBUM5-->
       </div>
-      <!--END of shop item#2-->
-      </section>
-      <!--END of shop section-->
-    </div>
 
     <div class="place-footer" id="footer"></div>
 

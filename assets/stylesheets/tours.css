@@ -1,12 +1,14 @@
 @media only screen and (max-width: 900px) {
-  .place-table{
+  .container{
     font-size: 8px;
   }
 }
 
-.place-table{
+.container{
   display: block;
   justify-self: center;
+  /* background-color: pink; */
+  margin: 5px;
 }
 
 table {
@@ -27,9 +29,9 @@ thead th {
   }
 }
 
-td {
-  padding: 10px 30px;
-  font-weight: 300;
+  td {
+    padding: 10px 30px;
+    font-weight: 300;
 }
 
 @media only screen and (max-width: 1200px) {

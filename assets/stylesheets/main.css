@@ -1,5 +1,7 @@
 body {
 	font-family: 'Raleway', sans-serif;
+	padding: 5px;
+	/* background-color: red; */
 }
 
 .page-style{
@@ -7,15 +9,15 @@ body {
   display: grid;
   align-content: space-evenly; /*space-between*/
   grid-template-columns:
-	10% 1fr 10%;
-
+	100%;
+	/* background-color: grey; */
 	grid-template-rows:
-	1fr
-	10%;
+	3fr
+	1fr;
 
   grid-template-areas:
-  ". main ."
-  ". footer ."
+  "main"
+  "footer";
 }
 
 a.nav {
@@ -28,12 +30,12 @@ a.nav {
 
 .main {
 		/*main content layout*/
-		/* background-color: yellow; */
 	  grid-area: main;
 	  display: grid;
 		/* align-content: top; */
 		/* align-items: center; */
 	  justify-self: center;
+		/* background-color: green; */
 	}
 
 	.place-footer {
@@ -41,16 +43,17 @@ a.nav {
 	  grid-area: footer;
 	  align-self: end;
 	  justify-self: center;
-		align-items: center;
-	  padding-bottom: 5px;
-	  /*background: grey;*/
+		/* align-items: center; */
+	  padding-bottom: 0px;
+		margin-bottom: 0;
+	  /* background: white; */
 	}
 
 	.place-footer a {
-		align-self: center;
+		/* align-self: center; */
 		padding-left: 5px;
 	  padding-right: 5px;
-		align-self: end;
+		/* align-self: end; */
 	}
 
 	.social{
@@ -60,9 +63,9 @@ a.nav {
 		height: auto;
 	}
 
-.wrapper {
+/* .wrapper {
 	max-width: 500px;
-}
+} */
 
 ul{
 text-align: left;
@@ -85,9 +88,12 @@ h1{
 	font-size: 65px;
 	text-align: center;
 	text-transform: uppercase;
+	line-height: normal;
 	letter-spacing: 2rem;
 	margin-bottom: 2rem;
 	margin-top: 0;
+	padding-top: 0;
+	/* background-color: yellow; */
 }
 
 
@@ -96,6 +102,7 @@ h1{
 		text-align: center;
 		font-size: 25px;
 		letter-spacing: 1rem;
+		/* margin-top: 0px; */
 	}
 }
 
@@ -105,7 +112,7 @@ h2 {
 	text-transform: uppercase;
 	letter-spacing: 1rem;
 	margin-bottom: 3rem;
-	margin-top: 0px;
+	margin-top: 10px;
 }
 
 h3{
@@ -131,7 +138,7 @@ img{
 
 .text{
 	/*text boxes styles*/
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: normal;
 	line-height: 2rem;
   text-decoration: none;
@@ -143,7 +150,7 @@ img{
 }
 
 .link {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: normal;
 	line-height: 2rem;
   text-decoration: none;
@@ -156,9 +163,11 @@ img{
 
 @media only screen and (max-width: 750px) {
 	.text {
+		font-size: 16px;
+		font-weight: normal;
 		text-align: justify;
 		line-height: 2rem;
-		margin-bottom: 2rem;
+		margin-bottom: 0rem;
 	}
 }
 
