@@ -1,21 +1,78 @@
-<section class="top-screen">
+}
 
-  <div class="menu">
+@media only screen and (max-width: 750px) {
+  .logo{
+    display: none;
+  }
+}
 
-    <button class="drop-b"><a class="nav" href="#">Menu</a>
-      <div class="dropdown-content">
-        <a class="nav" href="home.html">Home</a>
-        <a class="nav" href="tours.html">Tours</a>
-        <a class="nav" href="shop.html">Shop</a>
-        <a class="nav" href="about.html">about</a>
-        <a class="nav" href="media.html">Music videos</a>
-        <a class="nav" href="albums.html">Discography</a>
-      </div>
-    </button>
-  </div>
+.menu{
+  grid-area: navbar;
+  position: absolute; 
+  z-index: 1000;
+}
 
-    <section class="logo">
-      <a class="nav" href="home.html"><img class="nav" src="assets/images/Logo.png"></a>
-    </section>
+.drop-b{
+  /*styling got the menu button*/
+  position: absolute; 
+  z-index: 1000;
+  width: 68px;
+  height: 30px;
+  border: none;
+  background-color: white;
+  border-radius:12px;
 
-  </section>
+  font-size: 14px;
+  font-weight: 400;
+  transition: height 0.4s ease, width 0.4s ease, padding 0.4s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dropdown-content{
+  /*the menu style when on hover*/
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-top: 0;
+  pointer-events: none;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
+}
+
+.dropdown-content a{
+  display: block;
+  font-size:10px;
+	font-weight: normal;
+	text-align: left;
+  margin-top: 10px;
+}
+
+.dropdown-content a:hover{
+  font-weight: 500;
+
+}
+
+.drop-b:hover .dropdown-content {
+  max-height: 200px;
+  opacity: 1;
+  padding-top: 5px;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.menu:hover .drop-b{
+  height:165px;
+  width:130px;
+  padding-bottom: 5px;
+  padding-left: 10px; /*must keep to align with Menu*/
+  z-index: 1000;
+}
+
+.drop-b:hover {
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 12px;
+  padding-left: 15px;
+
+  text-align: left;
+}
