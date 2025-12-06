@@ -40,7 +40,7 @@
   border-radius:12px;
 
   font-size: 14px;
-	font-weight: 400;
+        font-weight: 400;
 }
 
 .dropdown-content{
@@ -52,8 +52,8 @@
 .dropdown-content a{
   display: block;
   font-size:10px;
-	font-weight: normal;
-	text-align: left;
+        font-weight: normal;
+        text-align: left;
   margin-top: 10px;
 }
 
