@@ -1,78 +1,22 @@
-}
-
-@media only screen and (max-width: 750px) {
-  .logo{
-    display: none;
-  }
-}
-
-.menu{
-  grid-area: navbar;
-  position: absolute; 
-  z-index: 1000;
-}
-
-.drop-b{
-  /*styling got the menu button*/
-  position: absolute; 
-  z-index: 1000;
-  width: 68px;
-  height: 30px;
-  border: none;
-  background-color: white;
-  border-radius:12px;
-
-  font-size: 14px;
-  font-weight: 400;
-  transition: height 0.4s ease, width 0.4s ease, padding 0.4s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dropdown-content{
-  /*the menu style when on hover*/
-  display: block;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  padding-top: 0;
-  pointer-events: none;
-  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
-}
-
-.dropdown-content a{
-  display: block;
-  font-size:10px;
-	font-weight: normal;
-	text-align: left;
-  margin-top: 10px;
-}
-
-.dropdown-content a:hover{
-  font-weight: 500;
-
-}
-
-.drop-b:hover .dropdown-content {
-  max-height: 200px;
-  opacity: 1;
-  padding-top: 5px;
-  z-index: 1000;
-  pointer-events: auto;
-}
-
-.menu:hover .drop-b{
-  height:165px;
-  width:130px;
-  padding-bottom: 5px;
-  padding-left: 10px; /*must keep to align with Menu*/
-  z-index: 1000;
-}
-
-.drop-b:hover {
-  background-color: rgba(255, 255, 255, .9);
-  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
-  position: relative;
-  border-radius: 12px;
-  padding-left: 15px;
-
+<div class="top-screen">
+  <div class="menu">
+    <button class="drop-b" type="button" aria-label="Open navigation menu">
+      <span class="menu-icon">&#9776;</span>
+      <div class="dropdown-content">
+        <a class="navbar" href="home.html">Home</a>
+        <a class="navbar" href="tours.html">Tours</a>
+        <a class="navbar" href="shop.html">Shop</a>
+        <a class="navbar" href="about.html">About</a>
+        <a class="navbar" href="media.html">Music Videos</a>
+        <a class="navbar" href="albums.html">Discography</a>
+      </div>
+    </button>
+  </div>
+  <div class="logo">
+    <a href="home.html">
+      <img src="assets/images/Logo black.png" alt="Parov Stelar logo">
+    </a>
+  </div>
+</div>
   text-align: left;
 }
